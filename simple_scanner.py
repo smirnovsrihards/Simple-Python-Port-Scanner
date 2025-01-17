@@ -72,8 +72,9 @@ if __name__ == '__main__':
         description = 'TCP and UDP port scanner',
         formatter_class=argparse.RawDescriptionHelpFormatter, 
         epilog=textwrap.dedent('''Example:
-        port.py -t 192.168.0.1 -p 80 --tcp
-        port.py -t 192.168.0.1 -p 53 --udp '''))
+        ./simple_scanner.py -t 192.168.0.1 -p 80 --tcp
+        ./simple_scanner.py -t 192.168.0.1 -p 53 --udp 
+        ./simple_scanner.py -t 192.168.0.1 -p 22 80 --tcp'''))
     parser.add_argument('-t', '--target', default='192.168.0.1', help='specified IP')
     parser.add_argument('-p', '--port', type=int, nargs='+', default=80, help='specified port')
     parser.add_argument('--tcp', action='store_true', help='Use TCP port for scanning')
