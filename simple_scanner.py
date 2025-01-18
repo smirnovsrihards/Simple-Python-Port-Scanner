@@ -2,7 +2,6 @@
 
 import socket 
 import threading
-import sys
 import argparse
 import textwrap
 
